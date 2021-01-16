@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat');
 
+body{
+    background-image: url('images/cafe.png');
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+}
+
 .menu {
     color: white;
     background-color: black;
