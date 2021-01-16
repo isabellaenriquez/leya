@@ -16,6 +16,11 @@
         "css": ["app.css"],
         "js": ["app.js"]
     }],
+        "web_accessible_resources": [
+    "audio/cafe.mp3",
+    "audio/rain.mp3",
+    "audio/beach.mp3"
+],
   "manifest_version": 2, 
   "chrome_url_overrides" : {
     "newtab": "/themes/cafe/cafe.html"
