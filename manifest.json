@@ -2,5 +2,19 @@
   "name": "leya",
   "version": "0.0.1",
   "description": "Customize your browsing experience with tailored aesthetics and background sounds!",
+  "permissions": ["tabs","activeTab","declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "css": ["app.css"],
+        "js": ["app.js"]
+    }],
   "manifest_version": 2
 }
