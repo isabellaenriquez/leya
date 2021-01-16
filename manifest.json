@@ -2,7 +2,7 @@
   "name": "leya",
   "version": "0.0.1",
   "description": "Customize your browsing experience with tailored aesthetics and background sounds!",
-  "permissions": ["tabs","activeTab","declarativeContent", "storage"],
+  "permissions": ["tabs","activeTab","declarativeContent", "storage", "topSites"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -16,5 +16,8 @@
         "css": ["app.css"],
         "js": ["app.js"]
     }],
-  "manifest_version": 2
+  "manifest_version": 2, 
+  "chrome_url_overrides" : {
+    "newtab": "/themes/cafe/cafe.html"
+  }
 }
