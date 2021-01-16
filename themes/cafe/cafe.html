@@ -1,34 +1,36 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="cafe.css">
-    </head>
-    <body>
-            <div class="menu">
+
+<head>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+
+<body>
+    <button id="menu-btn">See menu</button>
+    <input id="postal-input" type="text" placeholder="Postal code...">
+    <button id="postal-btn">Submit</button>
+    <!--div class="menu">
                 <h3>bookmarks</h3>
                 <div id="bookmarks">
-                    <p>onQ</p>
-                    <p>Google</p>
-                    <p>Reddit</p>
                 </div>
-            </div>
-            <div class="menu">
-                <h3>most recently visited</h3>
-                <div id="most-recent">
-                    <p>onQ</p>
-                    <p>Google</p>
-                    <p>Reddit</p></div>
-            </div>
-    </body>
+            </div-->
+    <div class="menu" style="display:none;">
+        <h3>most visited</h3>
+        <div id="most-visited">
+        </div>
+    </div>
+    <div class="menu" style="display:none;">
+        <h3>quote of the day</h3>
+        <div id="quote">
+        </div>
+    </div>
+    <div class="menu" style="display:none;">
+        <h3>weather in <span id="location">---</span></h3>
+        <img id="weather-icon">
+        <div id="weather"></div>
+    </div>
+    <script type="module" src="../key.js"></script>
+    <script type="module" src="theme.js"></script>
+</body>
+
 </html>
-=======
-<h1>welcome to the cafe</h1>
-
-<img src="/themes/cafe/images/bart.png">
-
-<h1>top sites:</h1>
-<div id="mostVisited"></div>
-
-<script src="theme.js"></script>
->>>>>>> 558af8286b7c8e71891eccc450ba47768aa3d966
