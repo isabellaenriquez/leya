@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // button words
     const beach = ['Hey, what\'s written in the sand?', 'The waves are coming...'];
     const cafe = ['What\'s on the menu?', 'I don\'t want anything.'];
-    const rain = ['', ''];
+    const rain = ['Rain on me', 'Actually don\'t'];
 
     // see/close menu
     const dashboardBtn = document.getElementById('dashboard-btn');
