@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat');/* change font */
+
+body{
+    background-image: url('images/beach.png');
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+}
+
+.menu {
+    color: rgb(250, 183, 95);
+    background-color: rgb(238, 193, 135);
+    border-width: 0.5rem;
+    border-style: solid;
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    width: 10%;
+    font-family: 'Caveat';
+    font-size: large;
+}
+
+.menu a{
+    color: rgb(250, 183, 95);
+    letter-spacing: 0;
+}
