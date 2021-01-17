@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Send messages for radio buttons
 	radios.forEach((radio) => {
 		radio.addEventListener('change', (e) => {
-			chrome.runtime.sendMessage({ selection: e.target.id });
+			chrome.runtime.sendMessage({
+				action: 'play',
+				selection: e.target.id
+			});
 		});
 	});
 

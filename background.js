@@ -38,7 +38,10 @@ chrome.runtime.onMessage.addListener(function (request, _, sendResponse) {
 		});
 	}
 
-	//Handle mute
+	//Handle requests
+	if (request.action == 'play') {
+		playAudio(request.selection);
+	}
 	if (request.action == 'mute') {
 		muted = true;
 		playAudio(request.selection);
