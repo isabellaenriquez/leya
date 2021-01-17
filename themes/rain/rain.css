@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Mali');
+@import url('https://fonts.googleapis.com/css2?family=Caveat');/* change everything */
 
 body{
-    background-image: url('images/beach.png');
+    background-image: url('images/rainy.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100vw 100vh;
 }
 
 .menu {
-    color: rgb(146, 83, 0);
-    background-color: rgb(238, 193, 135);
+    color: #ecdca3;
+    background-color: rgb(26, 27, 66);
+    border-color: #7f84cd;
     border-width: 0.5rem;
     border-style: solid;
     padding: 2rem;
@@ -18,30 +19,25 @@ body{
     letter-spacing: 0.1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     width: 10%;
-    font-family: 'Mali';
+    font-family: 'Caveat';
     font-size: large;
 }
 
 .menu a{
-    color: rgb(146, 83, 0);
+    color: rgb(250, 183, 95);
     letter-spacing: 0;
 }
 
 button {
-    background-color: rgb(238, 193, 135);
+    background-color: #4d40b9;
     padding: 0.7rem;
     border-radius: 10rem;
     transition: 1.2s;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 button:hover {
-    background-color:rgb(146, 83, 0);
-    color: white;
-}
-
-button:target {
-    transition: 10s;
+    background-color:#5f63ad;
 }
 
 input{
