@@ -2,10 +2,6 @@ import { key } from './key.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const beach = ['What\'s written in the sand?', 'The waves are coming...'];
-    const cafe = ['What\'s on the menu?', 'I don\'t want anything.'];
-    const rain = ['', ''];
-
     // most visited
     const top = document.getElementById("most-visited");
     function getRecent(data) {
@@ -55,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         getWeather(postalCode);
     });
 
+    // button words
+    const beach = ['Hey, what\'s written in the sand?', 'The waves are coming...'];
+    const cafe = ['What\'s on the menu?', 'I don\'t want anything.'];
+    const rain = ['', ''];
+
     // see/close menu
     const dashboardBtn = document.getElementById('dashboard-btn');
     dashboardBtn.addEventListener('click', () => {
@@ -64,11 +65,25 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menu.style.display == 'none') {
                 menu.style.display = 'block';
                 console.log('display menu');
-                dashboardBtn.innerHTML = cafe[1];
+                if (dashboardBtn.innerHTML == cafe[0]){
+                    dashboardBtn.innerHTML = cafe[1];
+                }else if (dashboardBtn.innerHTML == beach[0]){
+                    dashboardBtn.innerHTML = beach[1];
+                    console.log('beach 1')
+                }else if (dashboardBtn.innerHtml == rain[0]){
+                    dashboardBtn.innerHTML = rain[1];
+                }
+                
             } else {
                 menu.style.display = 'none';
                 console.log('close menu');
-                dashboardBtn.innerHTML = cafe[0]
+                if (dashboardBtn.innerHTML == cafe[1]){
+                    dashboardBtn.innerHTML = cafe[0];
+                }else if (dashboardBtn.innerHTML == beach[1]){
+                    dashboardBtn.innerHTML = beach[0];
+                }else if (dashboardBtn.innerHtml == rain[1]){
+                    dashboardBtn.innerHTML = rain[0];
+                }
             }
         }
     });

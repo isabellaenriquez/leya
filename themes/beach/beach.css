@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat');/* change font */
+@import url('https://fonts.googleapis.com/css2?family=Mali');
 
 body{
     background-image: url('images/beach.png');
@@ -7,7 +7,7 @@ body{
 }
 
 .menu {
-    color: rgb(250, 183, 95);
+    color: rgb(146, 83, 0);
     background-color: rgb(238, 193, 135);
     border-width: 0.5rem;
     border-style: solid;
@@ -17,11 +17,34 @@ body{
     letter-spacing: 0.1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     width: 10%;
-    font-family: 'Caveat';
+    font-family: 'Mali';
     font-size: large;
 }
 
 .menu a{
-    color: rgb(250, 183, 95);
+    color: rgb(146, 83, 0);
     letter-spacing: 0;
+}
+
+button {
+    background-color: rgb(238, 193, 135);
+    padding: 0.7rem;
+    border-radius: 10rem;
+    transition: 1.2s;
+    color: black;
+}
+
+button:hover {
+    background-color:rgb(146, 83, 0);
+    color: white;
+}
+
+button:target {
+    transition: 10s;
+}
+
+input{
+    border-radius: 0.75rem;
+    border-width: 0.1rem;
+    padding: 0.5rem;
 }
