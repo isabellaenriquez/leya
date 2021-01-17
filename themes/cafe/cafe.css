@@ -3,7 +3,8 @@
 body{
     background-image: url('images/cafe.png');
     background-repeat: no-repeat;
-    background-size: 100vw auto;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
 }
 
 .menu {
@@ -25,4 +26,17 @@ body{
 .menu a{
     color: white;
     letter-spacing: 0;
+}
+
+button{
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background-color: black;
+    color: white;
+}
+
+input{
+    border-radius: 0.75rem;
+    border-width: 0.1rem;
+    padding: 0.5rem;
 }

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>leya.</title>
     <link rel="stylesheet" href="cafe.css">
 </head>
 
@@ -9,25 +10,22 @@
     <button id="dashboard-btn">What's on the menu?</button>
     <input id="postal-input" type="text" placeholder="Postal code...">
     <button id="postal-btn">Submit</button>
-    <!--div class="menu">
-                <h3>bookmarks</h3>
-                <div id="bookmarks">
-                </div>
-            </div-->
-    <div class="menu" style="display:none;">
-        <h3>most visited</h3>
-        <div id="most-visited">
+    <div id="container">
+        <div class="menu" style="display:none;">
+            <h3>most visited</h3>
+            <div id="most-visited">
+            </div>
         </div>
-    </div>
-    <div class="menu" style="display:none;">
-        <h3>quote of the day</h3>
-        <div id="quote">
+        <div class="menu" style="display:none;">
+            <h3>quote of the day</h3>
+            <div id="quote">
+            </div>
         </div>
-    </div>
-    <div class="menu" style="display:none;">
-        <h3>weather in <span id="location">---</span></h3>
-        <img id="weather-icon">
-        <div id="weather"></div>
+        <div class="menu" style="display:none;">
+            <h3>weather in <span id="location">---</span></h3>
+            <img id="weather-icon">
+            <div id="weather"></div>
+        </div>
     </div>
     <script type="module" src="../key.js"></script>
     <script type="module" src="../theme.js"></script>
