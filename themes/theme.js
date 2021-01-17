@@ -19,49 +19,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     chrome.topSites.get(getRecent);
-    
+
     // quote of the day
-    function getQuote(){
+    function getQuote() {
         const quote = document.getElementById('quote');
         fetch('https://api.quotable.io/random?maxLength=50')
-        .then(response => response.json())
-        .then(data => {
-            //console.log(`${data.content} —${data.author}`);
-            quote.innerHTML = `${data.content} —${data.author}`;
-        });
+            .then(response => response.json())
+            .then(data => {
+                //console.log(`${data.content} —${data.author}`);
+                quote.innerHTML = `${data.content} —${data.author}`;
+            });
     }
     getQuote();
 
     // weather
-    function getWeather(postalCode){
-        const weatherText = document.getElementById('weather');
+    function getWeather(postalCode) {
         fetch("https://api.weatherapi.com/v1/current.json?key=" + key + "&q=" + postalCode, {
             "method": "GET"
         })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data.location);
-            const location = document.getElementById('location');
-            location.innerHTML = data.location.name;
-            const weatherIcon = document.getElementById('weather-icon');
-            weatherIcon.src = "https:" + data.current.condition.icon;
-            const weather = document.getElementById('weather');
-            weather.innerHTML = data.current.condition.text;
-        });
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.location);
+                const location = document.getElementById('location');
+                location.innerHTML = data.location.name;
+                const weatherIcon = document.getElementById('weather-icon');
+                weatherIcon.src = "https:" + data.current.condition.icon;
+                const weather = document.getElementById('weather');
+                weather.innerHTML = data.current.condition.text;
+            });
     }
 
     const postalBtn = document.getElementById('postal-btn');
-    postalBtn.addEventListener('click', () =>{
+    postalBtn.addEventListener('click', () => {
         const postalCode = document.getElementById('postal-input').value;
         getWeather(postalCode);
-    })
+    });
 
     // see/close menu
     const dashboardBtn = document.getElementById('dashboard-btn');
     dashboardBtn.addEventListener('click', () => {
         const menus = document.getElementsByClassName('menu');
         console.log(menus);
-        for (let menu of menus){
+        for (let menu of menus) {
             if (menu.style.display == 'none') {
                 menu.style.display = 'block';
                 console.log('display menu');
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    
+
 });
 
 
