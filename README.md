@@ -1,5 +1,7 @@
 # leya.
 
+leya is a Chrome extension that allows you to customize and enhance your browsing experience through visual aesthetics and audio ambience. Submitted for Hack the North 2020++.
+
 ### Team
 - Jessica Li
 - Isabella Enriquez
