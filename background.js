@@ -29,7 +29,6 @@ chrome.runtime.onInstalled.addListener(function () {
 chrome.runtime.onMessage.addListener(function (request, _, sendResponse) {
 	// Handle playing/pausing audio files
 	function playAudio(name) {
-		console.log(name);
 		audios.forEach((audio) => {
 			if (audio.name == name && !muted) {
 				audio.file.play();
@@ -47,6 +46,6 @@ chrome.runtime.onMessage.addListener(function (request, _, sendResponse) {
 		playAudio(request.selection);
 	} else if (request.action == 'unmute') {
 		muted = false;
-		playAudio(request.selection.selection); // TODO: look at this?
+		playAudio(request.selection);
 	}
 });
