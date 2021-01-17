@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat');
 
+body{
+    background-image: url('images/cafe.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+}
+
 .menu {
     color: white;
     background-color: black;
@@ -19,4 +26,28 @@
 .menu a{
     color: white;
     letter-spacing: 0;
+}
+
+
+button {
+    background-color: #ecba69;
+    padding: 0.7rem;
+    border-radius: 10rem;
+    transition: 1.2s;
+    color: black;
+}
+
+button:hover {
+    background-color:#ffda8a;
+}
+
+button:target {
+    transition: 10s;
+
+}
+
+input{
+    border-radius: 0.75rem;
+    border-width: 0.1rem;
+    padding: 0.5rem;
 }

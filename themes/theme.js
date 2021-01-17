@@ -1,6 +1,10 @@
-import { key } from '../key.js'
+import { key } from './key.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    const beach = ['What\'s written in the sand?', 'The waves are coming...'];
+    const cafe = ['What\'s on the menu?', 'I don\'t want anything.'];
+    const rain = ['', ''];
 
     // most visited
     const top = document.getElementById("most-visited");
@@ -45,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             weather.innerHTML = data.current.condition.text;
         });
     }
-    //getWeather();
 
     const postalBtn = document.getElementById('postal-btn');
     postalBtn.addEventListener('click', () =>{
@@ -54,19 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // see/close menu
-    const menuBtn = document.getElementById('menu-btn');
-    menuBtn.addEventListener('click', () => {
+    const dashboardBtn = document.getElementById('dashboard-btn');
+    dashboardBtn.addEventListener('click', () => {
         const menus = document.getElementsByClassName('menu');
         console.log(menus);
         for (let menu of menus){
             if (menu.style.display == 'none') {
                 menu.style.display = 'block';
                 console.log('display menu');
-                menuBtn.innerHTML = 'Close menu';
+                dashboardBtn.innerHTML = cafe[1];
             } else {
                 menu.style.display = 'none';
                 console.log('close menu');
-                menuBtn.innerHTML = 'See menu'
+                dashboardBtn.innerHTML = cafe[0]
             }
         }
     });
