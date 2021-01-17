@@ -60,31 +60,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const dashboardBtn = document.getElementById('dashboard-btn');
     dashboardBtn.addEventListener('click', () => {
         const menus = document.getElementsByClassName('menu');
-        console.log(menus);
+        //console.log(menus);
+        if (dashboardBtn.innerHTML == cafe[0]){
+            dashboardBtn.innerHTML = cafe[1];
+        }else if (dashboardBtn.innerHTML == beach[0]){
+            dashboardBtn.innerHTML = beach[1];
+        }else if (dashboardBtn.innerHTML == rain[0]) { 
+            console.log("ello");
+            dashboardBtn.innerHTML = rain[1];
+        }else if (dashboardBtn.innerHTML == cafe[1]){
+            dashboardBtn.innerHTML = cafe[0];
+        }else if (dashboardBtn.innerHTML == beach[1]){
+            dashboardBtn.innerHTML = beach[0];
+        }else if (dashboardBtn.innerHTML == rain[1]){
+            dashboardBtn.innerHTML = rain[0];
+        }
+
         for (let menu of menus) {
             if (menu.style.display == 'none') {
                 menu.style.display = 'block';
                 console.log('display menu');
-                console.log (dashboardBtn.innerHTML == rain[0]);
-                if (dashboardBtn.innerHTML == cafe[0]){
-                    dashboardBtn.innerHTML = cafe[1];
-                }else if (dashboardBtn.innerHTML == beach[0]){
-                    dashboardBtn.innerHTML = beach[1];
-                }else {//if (dashboardBtn.innerHtml == rain[0]){
-                    console.log("ello");
-                    dashboardBtn.innerHTML = rain[1];
-                }
-                
             } else {
                 menu.style.display = 'none';
                 console.log('close menu');
-                if (dashboardBtn.innerHTML == cafe[1]){
-                    dashboardBtn.innerHTML = cafe[0];
-                }else if (dashboardBtn.innerHTML == beach[1]){
-                    dashboardBtn.innerHTML = beach[0];
-                }else {//if (dashboardBtn.innerHtml == rain[1]){
-                    dashboardBtn.innerHTML = rain[0];
-                }
+                
             }
         }
     });
