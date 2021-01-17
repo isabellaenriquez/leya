@@ -1,7 +1,7 @@
 # leya.
 
 ### Team
-- Barrett Arbour
-- Isabella Enriquez
 - Jessica Li
+- Isabella Enriquez
 - Brandon Ye
+- Barrett Arbour
