@@ -1,6 +1,6 @@
 # leya.
 
-leya is a Chrome extension that allows you to customize and enhance your browsing experience through visual aesthetics and audio ambience. Submitted for Hack the North 2020++.
+leya is a Chrome extension that allows you to customize and enhance your browsing experience through visual aesthetics and audio ambience. Submitted for Hack the North 2020++. <a href="https://devpost.com/software/leya-18qn69">Check out our Devpost here!</a>
 
 ### Team
 - Jessica Li
@@ -13,5 +13,5 @@ leya is a Chrome extension that allows you to customize and enhance your browsin
 1. ```git clone``` this repository.
 2. Open Google Chrome and navigate to chrome://extensions/
 3. Turn on developer mode.
-4. Click 'Loaded unpacked' and select the leya folder.
+4. Click 'Loaded unpacked' and select the ```leya``` folder.
 5. Make sure the extension is turned on and you're ready to start browsing with leya! (We recommend pinning the extension for accessibility!)
