@@ -65,13 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menu.style.display == 'none') {
                 menu.style.display = 'block';
                 console.log('display menu');
-                console.log (dashboardBtn.innerHTML);
+                console.log (dashboardBtn.innerHTML == rain[0]);
                 if (dashboardBtn.innerHTML == cafe[0]){
                     dashboardBtn.innerHTML = cafe[1];
                 }else if (dashboardBtn.innerHTML == beach[0]){
                     dashboardBtn.innerHTML = beach[1];
-                    console.log('beach 1')
-                }else if (dashboardBtn.innerHtml == rain[0]){
+                }else {//if (dashboardBtn.innerHtml == rain[0]){
                     console.log("ello");
                     dashboardBtn.innerHTML = rain[1];
                 }
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     dashboardBtn.innerHTML = cafe[0];
                 }else if (dashboardBtn.innerHTML == beach[1]){
                     dashboardBtn.innerHTML = beach[0];
-                }else if (dashboardBtn.innerHtml == rain[1]){
+                }else {//if (dashboardBtn.innerHtml == rain[1]){
                     dashboardBtn.innerHTML = rain[0];
                 }
             }
