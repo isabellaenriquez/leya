@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="beach.css">
+</head>
+
+<body>
+    <button id="dashboard-btn">Hey, what's written in the sand?</button>
+    <input id="postal-input" type="text" placeholder="Postal code...">
+    <button id="postal-btn">Submit</button>
+    <div id="container">
+        <div class="menu" style="display:none;">
+            <h3>most visited</h3>
+            <div id="most-visited">
+            </div>
+        </div>
+        <div class="menu" style="display:none;">
+            <h3>quote of the day</h3>
+            <div id="quote">
+            </div>
+        </div>
+        <div class="menu" style="display:none;">
+            <h3>weather in <span id="location">---</span></h3>
+            <img id="weather-icon">
+            <div id="weather"></div>
+        </div>
+    </div>
+    <script type="module" src="../key.js"></script>
+    <script type="module" src="../theme.js"></script>
+</body>
+
+</html>
