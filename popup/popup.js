@@ -6,19 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Send messages for radio buttons
 	radios.forEach((radio) => {
 		radio.addEventListener('change', (e) => {
-			console.log(e);
-			chrome.runtime.sendMessage({ action: e.target.id });
+			chrome.runtime.sendMessage({ selection: e.target.id });
 		});
 	});
 
 	// Send messages for sound toggle
 	sound.addEventListener('change', () => {
+		const selectedRadio = () => {
+			return new Promise((resolve) => {
+				radios.forEach((radio) => {
+					if (document.getElementById(radio.id).checked) {
+						resolve(radio.id);
+					}
+				});
+				resolve('none');
+			});
+		};
+
 		if (sound.checked) {
-			soundLabel.innerHTML = 'sound on';
-			chrome.runtime.sendMessage({ action: 'play' });
+			selectedRadio().then((response) => {
+				soundLabel.innerHTML = 'sound on';
+				chrome.runtime.sendMessage({
+					action: 'unmute',
+					selection: response
+				});
+			});
 		} else if (!sound.checked) {
-			soundLabel.innerHTML = 'sound off';
-			chrome.runtime.sendMessage({ action: 'mute' });
+			selectedRadio().then((response) => {
+				soundLabel.innerHTML = 'sound off';
+				chrome.runtime.sendMessage({
+					action: 'mute',
+					selection: response
+				});
+			});
 		}
 	});
 });

@@ -17,6 +17,9 @@ const audios = [
 	{ name: 'beach', file: beachAudio }
 ];
 
+const audioNames = audios.map((audio) => audio.name);
+let muted = false;
+
 chrome.runtime.onInstalled.addListener(function () {
 	chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
 		chrome.declarativeContent.onPageChanged.addRules([pageConditions]);
@@ -24,26 +27,25 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 chrome.runtime.onMessage.addListener(function (request, _, sendResponse) {
-	function muteElement(elem) {
-		elem.muted = true;
-		elem.pause();
-	}
-
-	function muteAll() {
-		document.querySelectorAll('audio').forEach((elem) => muteElement(elem));
-	}
-
 	// Handle playing/pausing audio files
-	audios.forEach((audio) => {
-		if (audio.name == request.action) {
-			audio.file.play();
-		} else {
-			audio.file.pause();
-		}
-	});
+	function playAudio(name) {
+		audios.forEach((audio) => {
+			if (audio.name == name && !muted) {
+				audio.file.play();
+			} else {
+				audio.file.pause();
+			}
+		});
+	}
 
 	//Handle mute
-	if (request.action == 'muteAll') {
-		muteAll();
+	if (request.action == 'mute') {
+		muted = true;
+		playAudio(request.selection);
+	} else if (request.action == 'unmute') {
+		muted = false;
+		playAudio(request.selection);
+	} else if (audioNames.includes(request.selection)) {
+		playAudio(request.selection);
 	}
 });
