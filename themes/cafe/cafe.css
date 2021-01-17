@@ -28,11 +28,22 @@ body{
     letter-spacing: 0;
 }
 
-button{
-    padding: 0.5rem;
-    border-radius: 0.75rem;
-    background-color: black;
-    color: white;
+
+button {
+    background-color: #ecba69;
+    padding: 0.7rem;
+    border-radius: 10rem;
+    transition: 1.2s;
+    color: black;
+}
+
+button:hover {
+    background-color:#ffda8a;
+}
+
+button:target {
+    transition: 10s;
+
 }
 
 input{
